@@ -105,7 +105,7 @@ class TradingView:
             type (str, optional): Type of asset (stock, crypto, futures, index). Defaults to None.
         """
         req = requests.post(
-            "https://symbol-search.tradingview.com/symbol_search", params={"text": text, "type": type})
+            "https://symbol-search.tradingview.com/symbol_search", params={"text": text, "type": type}, timeout=60)
         symbols = json.loads(req.text)
         res = []
         for symbol in symbols:
