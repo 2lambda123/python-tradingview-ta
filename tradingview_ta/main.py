@@ -123,6 +123,8 @@ class TradingView:
 
 
 def calculate(indicators, indicators_key, screener, symbol, exchange, interval):
+    """"""
+    
     oscillators_counter, ma_counter = {"BUY": 0, "SELL": 0, "NEUTRAL": 0}, {
         "BUY": 0, "SELL": 0, "NEUTRAL": 0}
     computed_oscillators, computed_ma = {}, {}
